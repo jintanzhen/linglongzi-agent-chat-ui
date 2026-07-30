@@ -30,7 +30,7 @@ import { toast } from "sonner";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { Label } from "../ui/label";
 import { Switch } from "../ui/switch";
-import { GitHubSVG } from "../icons/github";
+// import { GitHubSVG } from "../icons/github";
 import {
   Tooltip,
   TooltipContent,
@@ -87,29 +87,29 @@ function ScrollToBottom(props: { className?: string }) {
   );
 }
 
-function OpenGitHubRepo() {
-  return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <a
-            href="https://github.com/langchain-ai/agent-chat-ui"
-            target="_blank"
-            className="flex items-center justify-center"
-          >
-            <GitHubSVG
-              width="24"
-              height="24"
-            />
-          </a>
-        </TooltipTrigger>
-        <TooltipContent side="left">
-          <p>Open GitHub repo</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  );
-}
+// function OpenGitHubRepo() {
+//   return (
+//     <TooltipProvider>
+//       <Tooltip>
+//         <TooltipTrigger asChild>
+//           <a
+//             href="https://github.com/langchain-ai/agent-chat-ui"
+//             target="_blank"
+//             className="flex items-center justify-center"
+//           >
+//             <GitHubSVG
+//               width="24"
+//               height="24"
+//             />
+//           </a>
+//         </TooltipTrigger>
+//         <TooltipContent side="left">
+//           <p>Open GitHub repo</p>
+//         </TooltipContent>
+//       </Tooltip>
+//     </TooltipProvider>
+//   );
+// }
 
 export function Thread() {
   const [artifactContext, setArtifactContext] = useArtifactContext();
@@ -325,9 +325,9 @@ export function Thread() {
                   </Button>
                 )}
               </div>
-              <div className="absolute top-2 right-4 flex items-center">
-                <OpenGitHubRepo />
-              </div>
+              {/*<div className="absolute top-2 right-4 flex items-center">*/}
+              {/*  <OpenGitHubRepo />*/}
+              {/*</div>*/}
             </div>
           )}
           {chatStarted && (
@@ -365,19 +365,19 @@ export function Thread() {
                     height={32}
                   />
                   <span className="text-xl font-semibold tracking-tight">
-                    Agent Chat
+                    玲珑子
                   </span>
                 </motion.button>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="flex items-center">
-                  <OpenGitHubRepo />
-                </div>
+                {/*<div className="flex items-center">*/}
+                {/*  <OpenGitHubRepo />*/}
+                {/*</div>*/}
                 <TooltipIconButton
                   size="lg"
                   className="p-4"
-                  tooltip="New thread"
+                  tooltip="新建会话"
                   variant="ghost"
                   onClick={() => setThreadId(null)}
                 >
@@ -438,7 +438,7 @@ export function Thread() {
                     <div className="flex items-center gap-3">
                       <LangGraphLogoSVG className="h-8 flex-shrink-0" />
                       <h1 className="text-2xl font-semibold tracking-tight">
-                        Agent Chat
+                        Hi,我是玲珑子，今天从哪里开始
                       </h1>
                     </div>
                   )}
@@ -479,7 +479,7 @@ export function Thread() {
                             form?.requestSubmit();
                           }
                         }}
-                        placeholder="Type your message..."
+                        placeholder="有问题，尽管问"
                         className="field-sizing-content resize-none border-none bg-transparent p-3.5 pb-0 shadow-none ring-0 outline-none focus:ring-0 focus:outline-none"
                       />
 
@@ -495,7 +495,7 @@ export function Thread() {
                               htmlFor="render-tool-calls"
                               className="text-sm text-gray-600"
                             >
-                              Hide Tool Calls
+                              隐藏工具调用
                             </Label>
                           </div>
                         </div>
@@ -505,7 +505,7 @@ export function Thread() {
                         >
                           <Plus className="size-5 text-gray-600" />
                           <span className="text-sm text-gray-600">
-                            Upload PDF or Image
+                            上传文件
                           </span>
                         </Label>
                         <input
@@ -534,7 +534,7 @@ export function Thread() {
                               (!input.trim() && contentBlocks.length === 0)
                             }
                           >
-                            Send
+                            发送
                           </Button>
                         )}
                       </div>
