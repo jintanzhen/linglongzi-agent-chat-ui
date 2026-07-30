@@ -438,7 +438,7 @@ export function Thread() {
                     <div className="flex items-center gap-3">
                       <LangGraphLogoSVG className="h-8 flex-shrink-0" />
                       <h1 className="text-2xl font-semibold tracking-tight">
-                        Hi,我是玲珑子，今天从哪里开始
+                        Hi，我是玲珑子，今天从哪里开始
                       </h1>
                     </div>
                   )}
